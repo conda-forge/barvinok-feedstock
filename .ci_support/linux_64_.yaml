@@ -16,11 +16,15 @@ docker_image:
 - quay.io/condaforge/linux-anvil-comp7
 gmp:
 - '6'
+isl:
+- '0.22'
 ntl:
 - 11.4.3
 pin_run_as_build:
   gmp:
     max_pin: x
+  isl:
+    max_pin: x.x
 target_platform:
 - linux-64
 zip_keys:
