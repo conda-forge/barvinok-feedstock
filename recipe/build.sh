@@ -7,6 +7,8 @@ set -x
 
 make -j${CPU_COUNT}
 
-make check
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
+    make check
+fi
 
 make install
