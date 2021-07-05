@@ -22,6 +22,7 @@ requirements:
   host:
     - ntl
     - gmp
+    - yaml
 
 test:
   commands:
