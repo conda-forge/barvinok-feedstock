@@ -3,7 +3,7 @@
 set -x
 
 
-./configure --prefix=$PREFIX --enable-shared-barvinok
+./configure --prefix=$PREFIX --enable-shared-barvinok --disable-dependency-tracking
 
 make -j${CPU_COUNT}
 
