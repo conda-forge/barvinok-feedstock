@@ -9,7 +9,7 @@ source:
   sha256: 6834ed7588fcc60f1d96743cf6e4c23c3174a0cdd72c128e1d0d9714957145c0
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("barvinok", max_pin="x.x.x") }}
