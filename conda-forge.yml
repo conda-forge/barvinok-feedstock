@@ -7,4 +7,3 @@ github:
 provider:
   linux_aarch64: azure
   linux_ppc64le: azure
-test: native_and_emulated
