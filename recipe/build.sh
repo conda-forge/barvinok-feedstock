@@ -5,7 +5,7 @@ set -ex
 ./get_submodules.sh
 ./autogen.sh
 
-./configure --prefix=$PREFIX --enable-shared-barvinok --disable-dependency-tracking
+./configure --prefix=$PREFIX --enable-shared-barvinok --disable-dependency-tracking --with-isl=system
 
 make -j${CPU_COUNT}
 
