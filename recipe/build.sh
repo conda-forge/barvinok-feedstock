@@ -1,11 +1,9 @@
 #!/bin/bash
 
-set -x
+set -ex
 
-# Get an updated config.sub and config.guess
-cp $BUILD_PREFIX/share/gnuconfig/config.* .
-cp $BUILD_PREFIX/share/gnuconfig/config.* polylib/
-cp $BUILD_PREFIX/share/gnuconfig/config.* isl/
+./get_submodules.sh
+./autogen.sh
 
 ./configure --prefix=$PREFIX --enable-shared-barvinok --disable-dependency-tracking --with-isl=system
 

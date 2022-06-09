@@ -5,7 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: http://barvinok.gforge.inria.fr/barvinok-{{ version }}.tar.gz
+  git_url: https://repo.or.cz/barvinok.git
+  git_tag: barvinok-{{ version }}
   sha256: 6834ed7588fcc60f1d96743cf6e4c23c3174a0cdd72c128e1d0d9714957145c0
 
 build:
@@ -19,7 +20,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
-    - gnuconfig   # [unix]
+    - autoconf
+    - automake
+    - libtool
   host:
     - ntl
     - gmp
@@ -28,9 +31,10 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/lib/libbarvinok$SHLIB_EXT
+    - iscc --version  # [build_platform == target_platform]
 
 about:
-  home: http://barvinok.gforge.inria.fr/
+  home: https://repo.or.cz/w/barvinok.git
   license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE
@@ -42,7 +46,6 @@ about:
     constructed. This is a generalization of both Ehrhart quasi-polynomials and
     vector partition functions. Alternatively, a generalized Ehrhart series can
     be constructed as well.
-  doc_url: http://barvinok.gforge.inria.fr/barvinok.pdf
   dev_url: https://repo.or.cz/w/barvinok.git
 
 extra:
