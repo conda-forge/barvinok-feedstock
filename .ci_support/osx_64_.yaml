@@ -26,3 +26,7 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+
+CONDA_BUILD_SYSROOT:
+- SDKs/MacOSX10.9.sdk
+
