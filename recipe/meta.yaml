@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
-    - gnuconfig # [unix]
+    - gnuconfig  # [unix]
   host:
     - ntl
     - gmp
