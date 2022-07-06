@@ -5,12 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://repo.or.cz/barvinok.git
-  git_tag: barvinok-{{ version }}
+  url: https://barvinok.sourceforge.io/barvinok-{{ version }}.tar.gz
   sha256: 6834ed7588fcc60f1d96743cf6e4c23c3174a0cdd72c128e1d0d9714957145c0
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("barvinok", max_pin="x.x.x") }}
@@ -20,9 +19,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
-    - autoconf
-    - automake
-    - libtool
+    - gnuconfig  # [unix]
   host:
     - ntl
     - gmp
@@ -33,7 +30,7 @@ test:
     - iscc --version  # [build_platform == target_platform]
 
 about:
-  home: https://repo.or.cz/w/barvinok.git
+  home: https://barvinok.sourceforge.io/
   license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE
@@ -46,6 +43,7 @@ about:
     vector partition functions. Alternatively, a generalized Ehrhart series can
     be constructed as well.
   dev_url: https://repo.or.cz/w/barvinok.git
+  doc_url: https://barvinok.sourceforge.io/barvinok.pdf
 
 extra:
   recipe-maintainers:
