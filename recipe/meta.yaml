@@ -1,4 +1,4 @@
-{% set version = "0.41.5" %}
+{% set version = "0.41.6" %}
 
 package:
   name: barvinok
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://barvinok.sourceforge.io/barvinok-{{ version }}.tar.gz
-  sha256: 6834ed7588fcc60f1d96743cf6e4c23c3174a0cdd72c128e1d0d9714957145c0
+  sha256: 20a8840caedf55c501dcf0906275aff354897d6e60e4fae707efddb647a6ee52
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("barvinok", max_pin="x.x.x") }}
@@ -34,7 +34,7 @@ about:
   license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE
-  summary: 'barvinok is a library for counting the number of integer points in parametric and non-parametric polytopes.'
+  summary: barvinok is a library for counting the number of integer points in parametric and non-parametric polytopes.
   description: |
     barvinok is a library for counting the number of integer points in
     parametric and non-parametric polytopes. For parametric polytopes an
