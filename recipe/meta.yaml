@@ -23,7 +23,7 @@ requirements:
   host:
     - ntl
     - gmp
-    - isl
+    - isl >=0.25
 
 test:
   commands:
