@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('cxx') }}
     - make
     - gnuconfig  # [unix]
+    - pkg-config  # [unix]
   host:
     - ntl
     - gmp
