@@ -14,8 +14,6 @@ cxx_compiler_version:
 - '13'
 gmp:
 - '6'
-isl:
-- '0.22'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 ntl:
@@ -23,8 +21,6 @@ ntl:
 pin_run_as_build:
   gmp:
     max_pin: x
-  isl:
-    max_pin: x.x
 target_platform:
 - osx-64
 zip_keys:
