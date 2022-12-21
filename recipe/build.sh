@@ -12,7 +12,7 @@ CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
 # Disable generating code for the build machine microarchitecture
 export ax_cv_gcc_x86_cpuid_1=unknown
 
-./configure --prefix=$PREFIX --enable-shared-barvinok --disable-dependency-tracking
+./configure --prefix=$PREFIX --enable-shared-barvinok --disable-dependency-tracking --with-isl=system
 
 make -j${CPU_COUNT}
 
