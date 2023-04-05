@@ -1,11 +1,11 @@
-About barvinok
-==============
+About barvinok-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/barvinok-feedstock/blob/main/LICENSE.txt)
 
 Home: https://barvinok.sourceforge.io/
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/barvinok-feedstock/blob/main/LICENSE.txt)
 
 Summary: barvinok is a library for counting the number of integer points in parametric and non-parametric polytopes.
 

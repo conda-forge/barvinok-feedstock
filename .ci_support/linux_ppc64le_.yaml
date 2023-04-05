@@ -16,8 +16,6 @@ docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 gmp:
 - '6'
-isl:
-- '0.25'
 ntl:
 - 11.4.3
 target_platform:

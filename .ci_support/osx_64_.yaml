@@ -14,8 +14,6 @@ cxx_compiler_version:
 - '14'
 gmp:
 - '6'
-isl:
-- '0.25'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 ntl:
