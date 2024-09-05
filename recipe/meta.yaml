@@ -1,4 +1,4 @@
-{% set version = "0.41.7" %}
+{% set version = "0.41.8" %}
 
 package:
   name: barvinok
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://barvinok.sourceforge.io/barvinok-{{ version }}.tar.gz
-  sha256: 1d305e42487d3db8084a233035a1578be827a8d8d4a5a7506f6a6315b18273d1
+  sha256: cc40feee5a882ea9fbaee696b303f377e9c46b2321831303480bed1adb8eca3a
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("barvinok", max_pin="x.x.x") }}
@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - make
     - gnuconfig  # [unix]
