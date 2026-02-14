@@ -8,6 +8,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* polylib/
 cp $BUILD_PREFIX/share/gnuconfig/config.* isl/
 
 CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+CPPFLAGS="${CPPFLAGS} -Wno-implicit-function-declaration"
 
 # Disable generating code for the build machine microarchitecture
 export ax_cv_gcc_x86_cpuid_1=unknown
